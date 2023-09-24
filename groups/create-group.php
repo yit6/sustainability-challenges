@@ -21,6 +21,7 @@ $group_id = $row["group_id"];
 if ($new_group) {
 	$challenge_results = $mysqli->query("SELECT challenge_id FROM Challenges ORDER BY RAND() LIMIT 3");
 	while ($challenge_row = $challenge_results->fetch_assoc()) {
+		$challenge_id = $challenge_id["challenge_id"];
 		$mysqli->query("INSERT INTO User_Challenges (user_id, challenge_id, status) VALUES ('$user_id', '$challenge_id', 'in-progress')");
 	}
 } else {

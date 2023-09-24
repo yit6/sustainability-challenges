@@ -1,50 +1,43 @@
-<!DOCTYPE html>
 <html>
 	<head>
+		<title>Create Konserva Account</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="initial-scale=1, width=device-width" />
-
-		<link rel="stylesheet" href="./global.css" />
-		<link rel="stylesheet" href="./index.css" />
-		<link
-				rel="stylesheet"
-				href="https://fonts.googleapis.com/css2?family=Font Awesome 5 Brands:wght@400&display=swap"
-				/>
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
-		<form action="create-account.php" method="post">
-			<div class="sign-up">
-				<input type="text" name="username" class="username-input"></div>
-			<input type="password" name="password" class="password-input"></div>
-		<div class="select-a-username"><label for="username">Select a username:</label></div>
-		<div class="password"><label for="password">Password:</label></div>
-		<input type="password" name="password2" class="re-enter-password"></div>
-	<div class="re-enter-password1"><label for="password2">Re-enter password:</label></div>
-	<div class="sign-up1" id="signUpContainer">
-		<button type="submit" class="sign-up2">Sign-up</button>
-		<a style="position: relative; top: -100px;" href="/login">Already have an account?</a>
-	</div>
-	<div class="header" id="headerContainer">
-		<div class="header1"></div>
-		<img class="vector-icon" alt="" src="./public/vector.svg" />
-	</div>
-	</div>
-		</form>
-
-		<script>
-			var signUpContainer = document.getElementById("signUpContainer");
-			if (signUpContainer) {
-				signUpContainer.addEventListener("click", function (e) {
-					// Please sync "Challenges page" to the project
-				});
-			}
-
-			var headerContainer = document.getElementById("headerContainer");
-			if (headerContainer) {
-				headerContainer.addEventListener("click", function (e) {
-					// Please sync "Landing Page" to the project
-				});
-			}
-		</script>
+		<nav class="flex item-center justify-between p-4" style="background: #3AC971;">
+			<div class="flex items-center">
+				<a href="/">
+					<img src="/assets/leaf.svg" />
+				</a>
+			</div>
+			<div class="flex items-center">
+				<a href="/login">
+					<img src="/assets/profile.svg" />
+				</a>
+			</div>
+		</nav>
+		<header class="p-6 flex item-center justify-center">
+			<h1 class="text-3xl font-bold">Join Konserva</h1>
+		</header>
+		<main class="flex items-center justify-center flex-col">
+			<form action="create-account.php" method="post">
+				<div class="mb-4 max-w-md">
+					<label for="username" class="block text-gray-700 mb-2">Username</label>
+					<input type="text" name="username" class="w-full px-3 py-2 border rounded" placeholder="Enter your username">
+				</div>
+				<div class="mb-4 max-w-md">
+					<label for="password" class="block text-gray-700 mb-2">Password</label>
+					<input type="password" name="password" class="w-full px-3 py-2 border rounded" placeholder="Enter your password">
+				</div>
+				<div class="mb-4 max-w-md">
+					<label for="password2" class="block text-gray-700 mb-2">Confirm Password</label>
+					<input type="password" name="password2" class="w-full px-3 py-2 border rounded" placeholder="Confirm your password">
+				</div>
+				<button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full max-w-md">Register</button>
+			</form>
+			<a class="text-sm text-blue-500 mt-4 block" href="/login">I already have an account</a>
+		</main>
 	</body>
 </html>
