@@ -8,6 +8,9 @@ if (!isset($_GET["name"])) {
 $user_id_result = $mysqli->query("SELECT user_id FROM Users WHERE username='".$_GET["name"]."';");
 $user_id = $user_id_result->fetch_assoc()["user_id"];
 
+$past_challenge_result = $mysqli->query("SELECT * FROM Past_Challenges WHERE user_id='$user_id';");
+$num = $past_challenge_result->num_rows;
+
 $group_result = $mysqli->query("SELECT group_id FROM Group_Members WHERE user_id='$user_id';");
 $group_id = $group_result->fetch_assoc()['group_id'];
 
@@ -38,6 +41,7 @@ $group_name = $mysqli->query("SELECT group_name FROM Groups WHERE group_id='$gro
 			<header class="p-6 flex item-center justify-center">
 				<h1 class="text-3xl font-bold"><?php echo $_GET["name"]."'s profile"; ?></h1>
 			</header>
+			<p class="text-center"><?php echo $num; ?> past challenges completed.</p>
 			<div class="flex item-center justify-center p-6">
 				<a href="/challenges" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4">Challenges</a>
 				<a href="/group" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">My Group</a>

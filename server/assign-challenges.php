@@ -9,6 +9,16 @@ while ($group_row = $group_ids->fetch_assoc()) {
 	$user_results = $mysqli->query("SELECT user_id FROM Group_Members WHERE group_id='$group_id'");
 	while ($user_row = $user_results->fetch_assoc()) {
 		$user_id = $user_row["user_id"];
+
+		$user_challenge_results = $mysqli->query("SELECT challenge_id, status FROM User_Challenges WHERE user_id='$user_id';");
+
+		while ($challenge_id = $user_challenge_results->fetch_assoc()) {
+			if ($challenge_id["status"] == "completed") {
+				$challenge_id = $challenge_id["challenge_id"];
+				$mysqli->query("INSERT INTO Past_Challenges (user_id, challenge_id) VALUES ('$user_id', '$challenge_id');");
+			}
+		}
+
 		$mysqli->query("DELETE FROM User_Challenges WHERE user_id='$user_id';");
 	}
 
