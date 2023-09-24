@@ -38,7 +38,7 @@ if (!isset($_SESSION["username"])) {
 	<body>
 		<nav class="flex item-center justify-between p-4" style="background: #3AC971;">
 			<div class="flex items-center">
-				<a href="/">
+				<a href="/logout">
 					<img src="/assets/leaf.svg" />
 				</a>
 			</div>
