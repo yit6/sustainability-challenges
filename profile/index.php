@@ -8,6 +8,9 @@ if (!isset($_GET["name"])) {
 $user_id_result = $mysqli->query("SELECT user_id FROM Users WHERE username='".$_GET["name"]."';");
 $user_id = $user_id_result->fetch_assoc()["user_id"];
 
+$past_challenge_result = $mysqli->query("SELECT * FROM Past_Challenges WHERE user_id='$user_id';");
+$num = $past_challenge_result->num_rows;
+
 $group_result = $mysqli->query("SELECT group_id FROM Group_Members WHERE user_id='$user_id';");
 $group_id = $group_result->fetch_assoc()['group_id'];
 
@@ -15,77 +18,35 @@ $group_name = $mysqli->query("SELECT group_name FROM Groups WHERE group_id='$gro
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="initial-scale=1, width=device-width" />
-
-	<link rel="stylesheet" href="/global.css" />
-	<link rel="stylesheet" href="./index.css" />
-	<link
-	  rel="stylesheet"
-	  href="https://fonts.googleapis.com/css2?family=Font Awesome 5 Brands:wght@400&display=swap"
-	/>
-	<link
-	  rel="stylesheet"
-	  href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-	/>
-  </head>
-  <body>
-	<div class="profile">
-	  <img id="aaaa" class="footer-icon" alt="" src="./public/footer.svg" />
-
-	  <div class="profile-photo"></div>
-	  <div class="header" id="headerContainer">
-		<div class="header1"></div>
-		<img class="vector-icon" alt="" src="./public/vector.svg" />
-
-		<img
-		  class="vector-icon1"
-		  alt=""
-		  src="./public/vector1.svg"
-		  id="vector1"
-		/>
-	  </div>
-	  <div class="username"><?php echo $_GET["name"]; ?></div>
-	  <div class="settings-background"></div>
-	  <div class="profile-child"></div>
-	  <div class="profile-item"></div>
-	  <div class="profile-inner"></div>
-	  <div class="line-div"></div>
-	  <div class="profile-child1"></div>
-	  <div class="change-profile-photo">Change profile photo</div>
-	  <div class="change-password">Change password</div>
-	  <div class="logout" id="logoutText">Logout</div>
-	  <div class="all-time-records">All time records</div>
-	  <div class="submit-a-challenge">Submit a challenge</div>
-	  <div class="report-a-bug">Report a bug</div>
-	</div>
-
-<script>
-document.getElementById("aaaa").addEventListener("click", (e) => {
-	let x = e.layerX/ document.getElementById("aaaa").width;
-	console.log(x);
-	if (x > 0.666) {
-		window.location.href="/group";
-	} else if (x > 0.333) {
-		window.location.href="/group";
-	} else {
-		window.location.href="/challenges";
-	}
-});
-var vector1 = document.getElementById("vector1");
-if (vector1) {
-	vector1.addEventListener("click", function (e) {
-		window.location.href = "/profile";
-	});
-}
-
-var logoutText = document.getElementById("logoutText");
-if (logoutText) {
-	logoutText.addEventListener("click", function (e) {
-		window.location.href = "/logout";
-	});
-}
-</script>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
+		<title><?php echo $_GET["name"]."'s profile"; ?></title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<nav class="flex item-center justify-between p-4" style="background: #3AC971;">
+			<div class="flex items-center">
+				<a href="/">
+					<img src="/assets/leaf.svg" />
+				</a>
+			</div>
+			<div class="flex items-center">
+				<a href="/profile">
+					<img src="/assets/profile.svg" />
+				</a>
+			</div>
+		</nav>
+		<main>
+			<header class="p-6 flex item-center justify-center">
+				<h1 class="text-3xl font-bold"><?php echo $_GET["name"]."'s profile"; ?></h1>
+			</header>
+			<p class="text-center"><?php echo $num; ?> past challenges completed.</p>
+			<div class="flex item-center justify-center p-6">
+				<a href="/challenges" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4">Challenges</a>
+				<a href="/group" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">My Group</a>
+				<a href="/logout" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Log Out</a>
+			</div>
+		</main>
+	</body>
 </html>

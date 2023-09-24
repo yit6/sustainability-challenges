@@ -4,115 +4,57 @@ if (!isset($_SESSION["username"])) {
 	?>
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+	<head>
+		<title>Konserva</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<nav class="flex item-center justify-between p-4" style="background: #3AC971;">
+			<div class="flex items-center">
+				<a href="/">
+					<img src="/assets/leaf.svg" />
+				</a>
+			</div>
+			<div class="flex items-center">
+				<a href="/login">
+					<img src="/assets/profile.svg" />
+				</a>
+			</div>
+		</nav>
+		<main>
+			<section class="relative">
+				<img class="w-full" src="/assets/runner.jpg" alt="Runner taking a step kicking up dirt"/>
+				<div class="absolute inset-x-0 bottom-0 flex items-center justify-center h-20 bg-black bg-opacity-50">
+					<p class="text-white text-center">Saving the planet one challenge at a time</p>
+				</div>
+			</section>
 
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="landingPage1.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Font Awesome 5 Brands:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="landing-page">
-      <div class="back-green first-card">
-        <img
-          class="climber-extreme-silhouette-cli-icon"
-          alt=""
-          src="assets/climber-extreme-silhouette-climbing-wallpaper.jpg"
-        />
+			<div class="flex justify-center m-4">
+				<a href="/register" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Started!</a>
+			</div>
 
-        <div class="complete-challenges">
-          <p class="complete">Complete</p>
-          <p class="complete">challenges</p>
-        </div>
-      </div>
-      <div class="back-lightblue second-card">
-        <div class="compete-against-your">Compete against your friends</div>
-        <img
-          class="climber-extreme-silhouette-cli-icon"
-          alt=""
-          src="assets/pexels-yan-krukau-8199708.jpg"
-        />
-      </div>
-      <div class="back-darkblue third-card">
-        <img
-          class="climber-extreme-silhouette-cli-icon"
-          alt=""
-          src="assets/89263.jpg"
-        />
-
-        <div class="find-exciting-ways">
-          Find exciting ways to save the environment
-        </div>
-      </div>
-      <div class="header">
-        <div class="header1"></div>
-        <img class="vector-icon" alt="" src="leaf-solid.svg" />
-
-        <div class="sign-up-wrapper" id="groupContainer">
-          <div class="sign-up" id="signUpText"><a href="/register">Sign up</a></div>
-        </div>
-      </div>
-      <img
-        class="running-person-icon"
-        alt=""
-        src="assets/Running%20black%20gradient.jpg"
-      />
-
-      <div class="landing-page-child"></div>
-      <div class="homepage-text-1">
-        <div class="saving-the-planet-container">
-          <p class="complete">Saving the planet one</p>
-          <p class="complete">challenge at a time</p>
-        </div>
-      </div>
-      <div class="footer-parent">
-        <div class="footer" id="footer"></div>
-        <div class="join-now"><a href="/register">Join now!</a></div>
-      </div>
-      <div class="landing-page-item"></div>
-      <div class="get-started-wrapper">
-        <div id="start" class="get-started"><a href="/register">Get started!</a></div>
-      </div>
-    </div>
-
-    <script>
-      var signUpText = document.getElementById("signUpText");
-      if (signUpText) {
-        signUpText.addEventListener("click", function (e) {
-          // Please sync "Sign In" to the project
-        });
-      }
-      
-      var groupContainer = document.getElementById("groupContainer");
-      if (groupContainer) {
-        groupContainer.addEventListener("click", function (e) {
-          // Please sync "Sign In" to the project
-        });
-      }
-      
-      var start = document.getElementById("start");
-      if (start) {
-        start.addEventListener("click", function (e) {
-          // Please sync "Sign In" to the project
-        });
-      }
-        
-      var footer = document.getElementById("footer");
-      if (footer) {
-        footer.addEventListener("click", function (e) {
-          // Please sync "Sign In" to the project
-        });
-      }
-      </script>
-  </body>
+			<section class="relative flex justify-center items-center">
+				<img src="/assets/climber.jpg" alt="Image" class="max-full-w">
+				<div class="absolute inset-y-0 left-0 text-white p-4 flex items-center w-1/3" style="background: #5CD48A;">
+					<p class="m-auto">Complete Challenges</p>
+				</div>
+			</section>
+			<section class="relative flex justify-center items-center">
+				<img src="/assets/high-five.jpg" alt="Image" class="max-full-w">
+				<div class="absolute inset-y-0 right-0 text-white p-4 flex items-center w-1/3" style="background: #58B79B;">
+					<p class="m-auto">Compete against your friends</p>
+				</div>
+			</section>
+			<section class="relative flex justify-center items-center">
+				<img src="/assets/flower.jpg" alt="Image" class="max-full-w">
+				<div class="absolute inset-y-0 left-0 text-white p-4 flex items-center w-1/3" style="background: #479797;">
+					<p class="m-auto">Find exciting ways to save the environment</p>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
 <?php
 } else {
