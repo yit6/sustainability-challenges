@@ -19,7 +19,7 @@ $group_name = $mysqli->query("SELECT group_name FROM Groups WHERE group_id='$gro
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 
-	<link rel="stylesheet" href="./global.css" />
+	<link rel="stylesheet" href="/global.css" />
 	<link rel="stylesheet" href="./index.css" />
 	<link
 	  rel="stylesheet"
@@ -32,7 +32,7 @@ $group_name = $mysqli->query("SELECT group_name FROM Groups WHERE group_id='$gro
   </head>
   <body>
 	<div class="profile">
-	  <img class="footer-icon" alt="" src="./public/footer.svg" />
+	  <img id="aaaa" class="footer-icon" alt="" src="./public/footer.svg" />
 
 	  <div class="profile-photo"></div>
 	  <div class="header" id="headerContainer">
@@ -62,17 +62,21 @@ $group_name = $mysqli->query("SELECT group_name FROM Groups WHERE group_id='$gro
 	</div>
 
 <script>
+document.getElementById("aaaa").addEventListener("click", (e) => {
+	let x = e.layerX/ document.getElementById("aaaa").width;
+	console.log(x);
+	if (x > 0.666) {
+		window.location.href="/group";
+	} else if (x > 0.333) {
+		window.location.href="/group";
+	} else {
+		window.location.href="/challenges";
+	}
+});
 var vector1 = document.getElementById("vector1");
 if (vector1) {
 	vector1.addEventListener("click", function (e) {
 		window.location.href = "/profile";
-	});
-}
-
-var headerContainer = document.getElementById("headerContainer");
-if (headerContainer) {
-	headerContainer.addEventListener("click", function (e) {
-		// Please sync "Landing Page 2" to the project
 	});
 }
 

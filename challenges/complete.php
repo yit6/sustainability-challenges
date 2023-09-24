@@ -8,11 +8,5 @@ $user_id = $row["user_id"];
 
 $challenge_id = $_GET["challenge_id"];
 $mysqli->query("UPDATE User_Challenges SET status = 'completed' WHERE user_id='$user_id' AND challenge_id='$challenge_id'");
+header("Location: /challenges");
 ?>
-<html>
-<head>
-</head>
-<body>
-<a href="/challenges">Back to the challenges page</a>
-</body>
-</html>

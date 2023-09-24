@@ -116,6 +116,7 @@ if (!isset($_SESSION["username"])) {
 </html>
 <?php
 } else {
+header("Location: /profile");
 ?>
 Logged in as 
 <?php

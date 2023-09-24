@@ -1,0 +1,99 @@
+.password-input {
+  top: 169px;
+  border-radius: var(--br-mini);
+  background-color: var(--color-whitesmoke);
+  height: 62px;
+}
+.password,
+.password-input,
+.username,
+.username-input {
+  position: absolute;
+  left: 45px;
+  width: 300px;
+}
+.username-input {
+  top: 307px;
+  border-radius: var(--br-mini);
+  background-color: var(--color-whitesmoke);
+  height: 62px;
+}
+.password,
+.username {
+  top: 115px;
+  display: inline-block;
+  height: 54px;
+}
+.password {
+  top: 253px;
+  left: 42px;
+}
+.enter-button-child {
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: var(--color-whitesmoke);
+  height: 56px;
+}
+.enter,
+.enter-button,
+.enter-button-child {
+  position: absolute;
+  width: 216px;
+}
+.enter {
+  top: 9px;
+  left: 0;
+  display: inline-block;
+  height: 47px;
+}
+.enter-button {
+  top: 701px;
+  left: 87px;
+  height: 56px;
+  cursor: pointer;
+  font-size: 36px;
+}
+.header1 {
+  position: relative;
+  background-color: #3ac971;
+  width: 390px;
+  height: 85px;
+  z-index: 0;
+}
+.vector-icon {
+  position: absolute;
+  margin: 0 !important;
+  height: 54.02%;
+  width: 15.64%;
+  top: 17.24%;
+  right: 81.28%;
+  bottom: 28.74%;
+  left: 3.08%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+.sign-in {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 844px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-font-awesome-5-brands);
+}
