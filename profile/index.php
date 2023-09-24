@@ -27,9 +27,12 @@ $group_name = $mysqli->query("SELECT group_name FROM Groups WHERE group_id='$gro
 	<body>
 		<nav class="flex item-center justify-between p-4" style="background: #3AC971;">
 			<div class="flex items-center">
-				<a href="/">
+				<a href="/logout">
 					<img src="/assets/leaf.svg" />
 				</a>
+			</div>
+			<div class="text-center">
+				<h1 class="text-white text-3xl font-bold mt-3">KONSERVA</h1>
 			</div>
 			<div class="flex items-center">
 				<a href="/profile">
@@ -45,7 +48,9 @@ $group_name = $mysqli->query("SELECT group_name FROM Groups WHERE group_id='$gro
 			<div class="flex item-center justify-center p-6">
 				<a href="/challenges" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4">Challenges</a>
 				<a href="/group" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">My Group</a>
+			<?php if ($_GET["name"] == $_SESSION["username"]) { ?>
 				<a href="/logout" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Log Out</a>
+			<?php } ?>
 			</div>
 		</main>
 	</body>

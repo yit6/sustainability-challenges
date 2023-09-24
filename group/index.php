@@ -70,6 +70,7 @@ if (!isset($_SESSION["username"])) {
 		echo "</div></a>";
 	}
 ?>
+		<a href="/group/leave.php" class="inline-block bg-red-500 hover:bg-red-700 text-white font-bold rounded m-4 p-4">Leave Group</a>
 		</main>
 	</body>
 </html>

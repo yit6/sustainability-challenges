@@ -13,9 +13,12 @@ if (!isset($_SESSION["username"])) {
 	<body>
 		<nav class="flex item-center justify-between p-4" style="background: #3AC971;">
 			<div class="flex items-center">
-				<a href="/">
+				<a href="/logout">
 					<img src="/assets/leaf.svg" />
 				</a>
+			</div>
+			<div class="text-center">
+				<h1 class="text-white text-3xl font-bold mt-3">KONSERVA</h1>
 			</div>
 			<div class="flex items-center">
 				<a href="/login">
@@ -36,23 +39,26 @@ if (!isset($_SESSION["username"])) {
 			</div>
 
 			<section class="relative flex justify-center items-center">
-				<img src="/assets/climber.jpg" alt="Image" class="max-full-w">
+				<img src="/assets/climber.jpg" alt="climber hanging from a rock" class="max-full-w">
 				<div class="absolute inset-y-0 left-0 text-white p-4 flex items-center w-1/3" style="background: #5CD48A;">
 					<p class="m-auto">Complete Challenges</p>
 				</div>
 			</section>
 			<section class="relative flex justify-center items-center">
-				<img src="/assets/high-five.jpg" alt="Image" class="max-full-w">
+				<img src="/assets/high-five.jpg" alt="several people leaning in for a high five" class="max-full-w">
 				<div class="absolute inset-y-0 right-0 text-white p-4 flex items-center w-1/3" style="background: #58B79B;">
 					<p class="m-auto">Compete against your friends</p>
 				</div>
 			</section>
 			<section class="relative flex justify-center items-center">
-				<img src="/assets/flower.jpg" alt="Image" class="max-full-w">
+				<img src="/assets/flower.jpg" alt="Image of flower" class="max-full-w">
 				<div class="absolute inset-y-0 left-0 text-white p-4 flex items-center w-1/3" style="background: #479797;">
 					<p class="m-auto">Find exciting ways to save the environment</p>
 				</div>
 			</section>
+			<div class="flex justify-center m-4">
+				<a href="/register" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Started!</a>
+			</div>
 		</main>
 	</body>
 </html>
