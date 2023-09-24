@@ -10,6 +10,10 @@ $row = $result->fetch_assoc();
 $user_id = $row["user_id"];
 
 $group_results = $mysqli->query("SELECT group_id FROM Group_Members WHERE user_id='$user_id';");
+
+if ($group_results->num_rows == 0) {
+	header("Location: /groups/");
+}
 $group_id = $group_results->fetch_assoc()["group_id"];
 
 $group_name = $mysqli->query("SELECT group_name FROM Groups where group_id='$group_id';")->fetch_assoc()["group_name"];

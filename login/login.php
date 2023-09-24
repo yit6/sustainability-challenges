@@ -1,4 +1,5 @@
 <?php
+header("Location: /");
 require_once "../server/config.php";
 $result = $mysqli->query("SELECT username, password FROM Users WHERE username=\"".$_POST["username"]."\";");
 if ($result->num_rows == 0) { ?>

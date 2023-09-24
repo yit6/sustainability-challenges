@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
+
+		<link rel="stylesheet" href="./global.css" />
+		<link rel="stylesheet" href="./index.css" />
+		<link
+				rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Font Awesome 5 Brands:wght@400&display=swap"
+				/>
+	</head>
+	<body>
+		<form action="login.php" method="post">
+		<div class="sign-in">
+			<input type="text" name="username" class="password-input"></div>
+		<input type="password" name="password" class="username-input"></div>
+	<div class="username"><label for="username">Username:</label></div>
+	<div class="password"><label for="username">Password:</label></div>
+	<div class="enter-button" id="enterButtonContainer">
+		<div class="enter-button-child"></div>
+		<button type="submit" class="enter">Log In</button>
+	</div>
+	<div class="header" id="headerContainer">
+		<div class="header1"></div>
+		<img class="vector-icon" alt="" src="./public/vector.svg" />
+	</div>
+	</div>
+
+	<script>
+		var enterButtonContainer = document.getElementById("enterButtonContainer");
+		if (enterButtonContainer) {
+			enterButtonContainer.addEventListener("click", function (e) {
+				// Please sync "Challenges page" to the project
+			});
+		}
+
+		var headerContainer = document.getElementById("headerContainer");
+		if (headerContainer) {
+			headerContainer.addEventListener("click", function (e) {
+				// Please sync "Landing Page" to the project
+			});
+		}
+	</script>
+	</body>
+</html>
