@@ -15,12 +15,16 @@ $group_id = $group_results->fetch_assoc()["group_id"];
 $group_name = $mysqli->query("SELECT group_name FROM Groups where group_id='$group_id';")->fetch_assoc()["group_name"];
 echo "<h1>".$group_name."</h1><br>";
 
-$user_results = $mysqli->query("SELECT user_id FROM Group_Members WHERE group_id='$group_id';");
-while ($user_id = $user_results->fetch_assoc()) {
-	$user_id = $user_id["user_id"];
-	$groupmate_result = $mysqli->query("SELECT * FROM Users WHERE user_id='$user_id';");
-	$groupmate = $groupmate_result->fetch_assoc();
-	echo $groupmate["username"]."<br>";
+$user_results = $mysqli->query(" SELECT Users.username,
+COUNT(CASE WHEN User_Challenges.status = 'completed' THEN 1 END) AS num 
+FROM Users 
+LEFT JOIN Group_Members ON Users.user_id = Group_Members.user_id
+LEFT JOIN User_Challenges ON Users.user_id = User_Challenges.user_id
+WHERE Group_Members.group_id = '$group_id'
+GROUP BY Users.username
+ORDER BY num DESC;");
+while ($user_result = $user_results->fetch_assoc()) {
+	echo $user_result["username"]." has completed ".$user_result["num"]."<br>";
 }
 ?>
 <a href="/">Back to main page</a>
