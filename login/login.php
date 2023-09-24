@@ -1,6 +1,6 @@
 <?php
 require_once "../server/config.php";
-$result = $mysqli->query("SELECT username, password FROM users WHERE username=\"".$_POST["username"]."\";");
+$result = $mysqli->query("SELECT username, password FROM Users WHERE username=\"".$_POST["username"]."\";");
 if ($result->num_rows == 0) { ?>
 No such username.<br>
 <a href="/login">Retry login</a>
