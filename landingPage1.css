@@ -1,0 +1,233 @@
+a {
+	color: white;
+}
+.first-card-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  width: 361px;
+  height: 167px;
+}
+.climber-extreme-silhouette-cli-icon {
+  position: absolute;
+  top: 0;
+  left: 111px;
+  border-radius: 0 var(--br-mini) var(--br-mini) 0;
+  width: 250px;
+  height: 167px;
+  object-fit: cover;
+}
+.complete {
+  margin: 0;
+}
+.complete-challenges,
+.first-card {
+  position: absolute;
+  top: 65px;
+  left: 18px;
+}
+.first-card {
+  top: 564px;
+  left: 15px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  width: 361px;
+  height: 167px;
+  text-align: left;
+  font-size: var(--font-size-base);
+}
+.compete-against-your {
+  position: absolute;
+  top: 49px;
+  left: 19px;
+  display: inline-block;
+  width: 81px;
+  height: 69px;
+}
+.second-card {
+  position: absolute;
+  top: 755px;
+  left: 15px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  width: 361px;
+  height: 167px;
+  text-align: left;
+  font-size: var(--font-size-base);
+}
+.find-exciting-ways {
+  position: absolute;
+  top: 46px;
+  left: 19px;
+  display: inline-block;
+  width: 81px;
+  height: 76px;
+}
+.third-card {
+  position: absolute;
+  top: 947px;
+  left: 15px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  width: 361px;
+  height: 167px;
+  text-align: left;
+  font-size: 13px;
+}
+.header1 {
+  position: relative;
+  background-color: #3ac971;
+  width: 390px;
+  height: 87px;
+  z-index: 0;
+}
+.vector-icon {
+  position: absolute;
+  margin: 0 !important;
+  height: 54.02%;
+  width: 15.64%;
+  top: 17.24%;
+  right: 81.28%;
+  bottom: 28.74%;
+  left: 3.08%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.sign-up,
+.sign-up-wrapper {
+  position: absolute;
+  width: 125px;
+  height: 32px;
+  cursor: pointer;
+}
+.sign-up {
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+.sign-up-wrapper {
+  margin: 0 !important;
+  top: 25px;
+  left: 265px;
+  z-index: 2;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 390px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.landing-page-child,
+.running-person-icon {
+  position: absolute;
+  top: 87px;
+  left: 0;
+  height: 392px;
+}
+.running-person-icon {
+  width: 389px;
+  object-fit: cover;
+}
+.landing-page-child {
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.67));
+  width: 390px;
+}
+.homepage-text-1,
+.saving-the-planet-container {
+  position: absolute;
+  left: calc(50% - 157px);
+  width: 314px;
+  height: 58px;
+}
+.saving-the-planet-container {
+  top: 0;
+  display: inline-block;
+}
+.homepage-text-1 {
+  top: 383px;
+  font-family: var(--font-font-awesome-5-brands);
+}
+.footer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: #1d568a;
+  width: 361px;
+  height: 72px;
+  cursor: pointer;
+}
+.join-now {
+  position: absolute;
+  top: 19px;
+  left: calc(50% - 65.5px);
+  display: inline-block;
+  width: 130px;
+  height: 33px;
+}
+.footer-parent {
+  position: absolute;
+  top: 1129px;
+  left: 15px;
+  width: 361px;
+  height: 72px;
+}
+.landing-page-item {
+  position: absolute;
+  top: 495px;
+  left: 125px;
+  border-radius: var(--br-mini);
+  background-color: #515ab2;
+  width: 138px;
+  height: 47px;
+}
+.get-started,
+.get-started-wrapper {
+  position: absolute;
+  width: 207px;
+  height: 43px;
+}
+.get-started {
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+.get-started-wrapper {
+  top: 505px;
+  left: 91px;
+  font-size: 20px;
+  font-family: var(--font-font-awesome-5-brands);
+}
+.landing-page {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 844px;
+  overflow-y: "y-auto";
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+
+
+.back-green { 
+    background-color: #5CD48A;
+}
+.back-lightblue { 
+    background-color: #58B79B;
+}
+.back-darkblue { 
+    background-color: #479797;
+}
+.back-green, 
+.back-lightblue,
+.back-darkblue {
+    border-radius: 15px;
+}

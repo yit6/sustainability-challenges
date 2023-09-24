@@ -1,0 +1,151 @@
+.footer-icon,
+.profile-photo {
+  position: absolute;
+  top: 772px;
+  left: 0;
+  width: 390px;
+  height: 72px;
+}
+.profile-photo {
+  top: 134px;
+  left: 112px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 165px;
+  height: 165px;
+}
+.header1 {
+  position: relative;
+  background-color: #3ac971;
+  width: 390px;
+  height: 85px;
+  z-index: 0;
+}
+.vector-icon {
+  position: absolute;
+  margin: 0 !important;
+  height: 54.02%;
+  width: 15.64%;
+  top: 17.25%;
+  right: 81.28%;
+  bottom: 28.73%;
+  left: 3.08%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.header,
+.vector-icon1 {
+  position: absolute;
+  cursor: pointer;
+}
+.vector-icon1 {
+  margin: 0 !important;
+  top: 12px;
+  left: 302px;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+.header {
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.username {
+  position: absolute;
+  top: 311px;
+  left: 109px;
+  font-size: 36px;
+  font-family: var(--font-font-awesome-5-brands);
+  text-align: center;
+}
+.settings-background {
+  position: absolute;
+  top: 359px;
+  left: 12px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.25);
+  width: 366px;
+  height: 400px;
+}
+.line-div,
+.profile-child,
+.profile-child1,
+.profile-inner,
+.profile-item {
+  position: absolute;
+  top: 427.5px;
+  left: 11.5px;
+  border-top: 1px solid var(--color-silver);
+  box-sizing: border-box;
+  width: 367px;
+  height: 1px;
+}
+.line-div,
+.profile-child1,
+.profile-inner,
+.profile-item {
+  top: 698.5px;
+}
+.line-div,
+.profile-child1,
+.profile-inner {
+  top: 633.5px;
+}
+.line-div,
+.profile-child1 {
+  top: 563.5px;
+}
+.profile-child1 {
+  top: 495.5px;
+}
+.change-password,
+.change-profile-photo,
+.logout {
+  position: absolute;
+  top: 378px;
+  left: 30px;
+}
+.change-password,
+.logout {
+  top: 448px;
+}
+.logout {
+  top: 714px;
+  left: 150px;
+  color: #e71919;
+  cursor: pointer;
+}
+.all-time-records {
+  position: absolute;
+  top: 515px;
+  left: 30px;
+}
+.report-a-bug,
+.submit-a-challenge {
+  position: absolute;
+  top: 584px;
+  left: 30px;
+}
+.report-a-bug {
+  top: 652px;
+}
+.profile {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 844px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
