@@ -10,9 +10,13 @@ if (!isset($_SESSION["username"])) {
 	$names = array();
 	$descs = array();
 	$progs = array();
+	$no_group = false;
 	$user_result = $mysqli->query("SELECT user_id FROM Users WHERE username=\"".$_SESSION["username"]."\";");
 	$user_id = $user_result->fetch_assoc()["user_id"];
 	$challenge_results = $mysqli->query("SELECT challenge_id FROM User_Challenges WHERE user_id='$user_id';");
+	if ($challenge_results->num_rows == 0) {
+		$no_group = true;
+	}
 	while ($challenge_id = $challenge_results->fetch_assoc()) {
 		$challenge_id = $challenge_id["challenge_id"];
 		$challenge_name = $mysqli->query("SELECT (challenge_name) FROM Challenges WHERE challenge_id='$challenge_id';")->fetch_assoc()['challenge_name'];
@@ -45,6 +49,9 @@ if (!isset($_SESSION["username"])) {
 			</div>
 		</nav>
 <?php
+	if ($no_group) {
+		echo "<h1 class='text-center'>No challenges yet, join a group and wait for the next week</h1>";
+	}
 	while (count($ids) != 0) {
 		$id = array_pop($ids);
 		$name = array_pop($names);
