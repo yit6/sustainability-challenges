@@ -6,6 +6,8 @@ if (!isset($_SESSION["username"])) {
 <html>
 	<head>
 		<title>Konserva</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
@@ -16,7 +18,7 @@ if (!isset($_SESSION["username"])) {
 				</a>
 			</div>
 			<div class="flex items-center">
-				<a href="/profile">
+				<a href="/login">
 					<img src="/assets/profile.svg" />
 				</a>
 			</div>
